@@ -1,0 +1,59 @@
+public class NextGreatest {
+	
+	
+	static int s[];
+	static int arr[]= {4,5,2,0};
+	
+	public static void nextGreatest(int arr[]) {
+		int j;
+		int i;
+		for( i=0;i<arr.length-1;i++) {
+			
+			for( j=i+1;j<arr.length;j++) {
+				
+				
+				if(arr[j]>arr[i]) {
+					
+					
+					//System.out.println(arr[i]+"--- "+arr[j]);
+					s[i]=arr[j];
+					break;
+					
+				}
+				
+				
+			}
+			
+			if(j==arr.length) s[i]=-1;
+			//System.out.println(arr[i]+"--- "+-1);
+			
+		}
+		
+	
+		//System.out.println(arr[i]+"--- "+-1);
+		s[i]=-1;
+		
+	}
+	
+	public static void display() {
+		
+		
+		for(int i=0;i<s.length;i++) {
+			
+			System.out.println(arr[i]+"-- "+s[i]);
+			
+		}
+		
+		
+	}
+	
+	public static void main(String args[]) {
+		
+			s=new int[arr.length];
+		
+		nextGreatest(arr);
+		display();
+		
+	}
+
+}
